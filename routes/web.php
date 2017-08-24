@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/home', function() { return Redirect::to('/'); });
+
+Route::post('/user/avatar/upload', 'HomeController@fileUpload')->name('upload');
+
+
+Route::get('/logout', function()
+{
+    Auth::logout();
+    Session::flush();
+    return Redirect::to('/');
 });

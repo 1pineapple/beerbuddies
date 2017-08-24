@@ -1,0 +1,131 @@
+html, body
+  width: 100%
+  height: 100%
+
+body
+  //background-image: url('/img/bg_login.jpeg')
+  //background-size: cover
+  //background-position: center
+  //background-color: #1551d9
+
+  background: linear-gradient(227deg, #1488cc, #2b32b2, #cc5333)
+  background-size: 600% 600%
+
+  -webkit-animation: bg-gradien-animation 30s ease infinite
+  -moz-animation: bg-gradien-animation 30s ease infinite
+  -o-animation: bg-gradien-animation 30s ease infinite
+  animation: bg-gradien-animation 30s ease infinite
+
+  @-webkit-keyframes bg-gradien-animation
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+  @-moz-keyframes bg-gradien-animation
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+  @-o-keyframes bg-gradien-animation
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+  @keyframes bg-gradien-animation
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+
+#app
+  width: 100%
+  height: 100%
+  position: relative
+
+.login-form-wrapper
+  width: 350px
+  margin: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  & .btn-link
+    display: block
+    margin: 10px auto
+    color: #FFF
+    font-weight: bold
+    text-transform: uppercase
+    padding: 10px 12px
+  & .have-acc
+    text-align: center
+    margin-top: 20px
+    & span
+      color: #FFF
+    & a
+      text-transform: uppercase
+      color: #FFF
+      font-weight: bold
+  & .dont-have-acc
+    display: flex
+    justify-content: space-between
+    & span
+      color: #FFF
+    & a
+      text-transform: uppercase
+      color: #FFF
+      font-weight: bold
+  > img
+    display: block
+    margin: 0 auto 20px
+  & form
+    width: 100%
+    padding: 40px 30px
+    background-color: #fff
+    border-radius: 5px
+    display: inline-block
+    & .form-control
+      border-top: none
+      box-shadow: none
+      border-left: none
+      border-right: none
+      border-radius: 0
+      border-bottom: 1px solid #e8e8e8
+      padding: 6px 5px
+    & .checkbox label
+      font-weight: bold
+      position: relative
+      &:before
+        content: '\f0c8'
+        font-family: 'FontAwesome'
+        position: absolute
+        font-weight: normal
+        top: 0
+        left: 0
+        color: #3097D1
+    & .checkbox input[type=checkbox]:checked ~ label
+      &:before
+        content: '\f14a'
+    & .checkbox input[type="checkbox"]
+      display: none
+    & .btn-primary
+      width: calc( 100% - 50px)
+      display: block
+      margin: 0 auto
+      border-radius: 0
+      text-transform: uppercase
+    & .form-group
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0

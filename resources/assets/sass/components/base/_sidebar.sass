@@ -1,0 +1,44 @@
+#sidebar
+  width: 250px
+  min-height: 1px
+  height: 100%
+  padding-top: 30px
+  background-color: #2A58AD
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  > a
+    display: block
+    padding: 0 20px
+    margin-bottom: 30px
+  & .copyright
+    color: #FFF
+    text-align: center
+    font-size: 12px
+  & .nav-sidebar
+    & ul
+      margin: 0
+      padding: 0
+      & li
+        list-style: none
+        & a
+          padding: 15px 0
+          display: block
+          text-align: center
+          &:hover
+            text-decoration: none
+            background-color: #1f468a
+          & i, & span
+            width: 100%
+            display: block
+            color: #FFF
+          & i
+            font-size: 22px
+          & span
+            margin-top: 15px
+            text-transform: uppercase
+          &.active
+            background-color: #1D4C9E
+            border-right: 5px solid #23AAEA
+            & span
+              font-weight: bold
