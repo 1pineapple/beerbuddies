@@ -1,7 +1,7 @@
 <div id="personal-info">
 
     <div class="personal-photo">
-        <img src="{{ Auth::user()->ava_path ? asset('uploads/users/' . Auth::user()->ava_path) : 'img/user_default.png'}}" alt="">
+        <img src="{{ Auth::user()->ava_path ? asset('uploads/userPhoto/' . Auth::user()->ava_path) : 'img/user_default.png'}}" alt="">
         <input type="file" name="userPhoto" id="userPhoto" class="inputfile" />
         <label for="userPhoto"><i class="fa fa-upload"></i></label>
     </div>

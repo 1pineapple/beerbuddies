@@ -27,21 +27,33 @@
     <script src="{{ asset('js/home.js') }}"></script>
 
     <script>
+
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        });
+
         $("input#userPhoto").on('change', function () {
 
-            var fileName = $(this).val();
+            var file = this.files[0];
+            var data = new FormData();
+            data.append('userPhoto', file);
 
             $.ajax({
                 url: '{{ route("upload") }}',
                 type: 'POST',
-                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                data: new FormData(fileName),
+                data: data,
                 dataType: 'json',
                 contentType: false,
 //                cache: false,
                 processData: false,
                 success:function(response){
-                    console.log(response);
+                    $('.personal-photo img').attr('src', response.url);
+                    console.log(response.exist);
+                    console.log(response.url);
                 }
             });
         });

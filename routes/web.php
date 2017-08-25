@@ -23,6 +23,5 @@ Route::post('/user/avatar/upload', 'HomeController@fileUpload')->name('upload');
 Route::get('/logout', function()
 {
     Auth::logout();
-    Session::flush();
     return Redirect::to('/');
 });

@@ -1,1 +1,1 @@
-require("./components/inputfile");
+require('./components/inputfile');
