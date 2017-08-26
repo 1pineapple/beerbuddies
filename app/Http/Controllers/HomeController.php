@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request,
-    File,
-    Image;
-
 use App\User;
+
+use Illuminate\Http\Request;
+use File;
+use Image;
 
 class HomeController extends Controller
 {

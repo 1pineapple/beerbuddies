@@ -1763,6 +1763,7 @@
 127.0.0.1 - - [25/Aug/2017:19:45:16 +0300] "GET /uploads/userPhoto/963108f197c35d2f31e8f2d85931a1a8.jpg HTTP/1.1" 200 12744 "http://beerbuddies.dev/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 127.0.0.1 - - [25/Aug/2017:19:45:28 +0300] "POST /user/avatar/upload HTTP/1.1" 200 1039 "http://beerbuddies.dev/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 127.0.0.1 - - [25/Aug/2017:19:45:28 +0300] "GET /uploads/userPhoto/fe88ec7e21fc1870a5d2d74b661b7ed6.jpg HTTP/1.1" 200 9681 "http://beerbuddies.dev/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
+<<<<<<< HEAD
 127.0.0.1 - - [26/Aug/2017:09:34:29 +0300] "GET / HTTP/1.1" 302 1379 "http://beerbuddies.dev/login" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 127.0.0.1 - - [26/Aug/2017:09:34:30 +0300] "GET /login HTTP/1.1" 200 1810 "http://beerbuddies.dev/login" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 127.0.0.1 - - [26/Aug/2017:09:34:31 +0300] "GET /img/logo.png HTTP/1.1" 200 3248 "http://beerbuddies.dev/login" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
@@ -5539,3 +5540,5 @@
 127.0.0.1 - - [26/Aug/2017:16:51:11 +0300] "GET /favicon.ico HTTP/1.1" 200 1706 "http://beerbuddies.dev/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 127.0.0.1 - - [26/Aug/2017:16:51:34 +0300] "GET /css/home.css HTTP/1.1" 200 9295 "http://beerbuddies.dev/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
 127.0.0.1 - - [26/Aug/2017:16:51:34 +0300] "GET /css/app.css HTTP/1.1" 200 22338 "http://beerbuddies.dev/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"
+=======
+>>>>>>> c6d62bab46d5511f3207da7967437d60f56b104d
