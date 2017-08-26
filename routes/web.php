@@ -17,12 +17,21 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/home', function() { return Redirect::to('/'); });
 
+// Profile
+
+Route::get('/profile/edit', 'EditProfileController@index')->name('editProfile');
+
+Route::post('/profile/edit', 'EditProfileController@editProfile')->name('editProfileSubmit');
+
+// User
+
+Route::get('/user/{slug}', 'UserController@index')->name('user');
+
 Route::post('/user/avatar/upload', 'HomeController@fileUpload')->name('upload');
 
 
 Route::get('/logout', function()
 {
     Auth::logout();
-    Session::flush();
     return Redirect::to('/');
 });
