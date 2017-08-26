@@ -1,3 +1,8 @@
 <div id="home-content">
-    @include('.components.home.personal-info')
+    <div class="flex-row">
+        @include('.components.home.personal-info')
+    </div>
+    {{--<div class="flex-row">--}}
+        {{--@include('.components.home.home-rating')--}}
+    {{--</div>--}}
 </div>

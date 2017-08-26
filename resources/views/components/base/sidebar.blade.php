@@ -26,6 +26,11 @@
                     <span class="notification-count">345</span>
                 </a>
             </li>
+            <li>
+                <a href="#">
+                    <span>Following</span>
+                </a>
+            </li>
         </ul>
     </div>
 

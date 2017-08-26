@@ -1,3 +1,7 @@
 <div id="home-content">
-    @include('.components.user.user-info')
+
+    <div class="flex-row">
+        @include('.components.user.user-info')
+    </div>
+
 </div>

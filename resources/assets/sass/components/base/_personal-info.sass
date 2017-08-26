@@ -100,7 +100,6 @@
       height: 100%
       border-radius: 50%
       margin: 0
-      background-color: rgba(0,0,0,0.5)
       &:hover
         cursor: pointer
       & i
@@ -132,6 +131,26 @@
     &:hover
       text-decoration: none
 
+.personal-location
+  margin-bottom: 10px
+
+.user-buttons
+  & a
+    border: none
+    color: #FFF
+    padding: 10px 25px
+    display: inline-block
+    &.follow-btn
+      background-color: #23AAEA
+      &:hover, &:focus, &:active
+        background-color: darken(#23AAEA, 5%)
+    &.message-btn
+      background-color: #65B92D
+      &:hover, &:focus, &:active
+        background-color: darken(#65B92D, 5%)
+    &:hover, &:focus, &:active
+      text-decoration: none
+  
 .list-achievement
   display: flex
   & .achievement-item

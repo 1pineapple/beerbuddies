@@ -6,6 +6,7 @@
 
     <div class="info-wrapper">
         <div class="info">
+
             <div class="full-name">
                 <h1>{{ $user->full_name ? $user->full_name : $user->nickname}}</h1>
             </div>
@@ -20,6 +21,11 @@
                 @if( $user->location != null)
                     <span>Location: <strong>{{ $user->location }}</strong></span>
                 @endif
+            </div>
+
+            <div class="user-buttons">
+                <a href="#" class="follow-btn">Follow</a>
+                <a href="#" class="message-btn">Message</a>
             </div>
 
         </div>
@@ -50,10 +56,7 @@
 
     <div class="list-achievement">
         <div class="achievement-item">
-            <img src="{{ asset('img/achievement.png') }}" class="img-responsive" alt="Achievement" title="Achievement">
-        </div>
-        <div class="achievement-item">
-            <img src="{{ asset('img/achievement.png') }}" class="img-responsive" alt="Achievement" title="Achievement">
+            <img src="{{ asset('img/achievement.png') }}" class="img-responsive" alt="Achievements to register on BeerBuddies" title="Achievements to register on BeerBuddies">
         </div>
     </div>
 </div>
