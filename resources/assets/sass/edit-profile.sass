@@ -1,0 +1,77 @@
+@import "home"
+@import "_mixins/placeholder"
+
+#edit-profile
+  background-color: #fff
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.02)
+  padding: 0
+  width: 100%
+  display: flex
+  & .edit-profile-block
+    padding: 25px 0
+    flex: 1
+    border-right: 1px solid #dddfe0
+    &:first-child
+      flex: 0.5
+    &:last-child
+      border-right: none
+    & h2
+      text-align: center
+      font-weight: 100
+      font-size: 24px
+      margin-top: 0
+      margin-bottom: 25px
+    & img
+      display: block
+      margin: 0 auto
+      width: 200px
+      height: 200px
+      border-radius: 50%
+    & .personal-photo
+      width: 200px
+      height: 200px
+      margin: 0 auto
+      overflow: auto
+      border-radius: 0
+    & .form-group
+      padding: 0
+      margin: 0 auto 20px
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      & label
+        color: #185A95
+        width: 100%
+        text-align: center
+      & input[type=text]
+        border: 1px solid #DEE3E7
+        color: #000000
+        padding: 3px 6px
+        width: 250px
+        @include placeholder
+          color: #000000
+      & input[readonly]
+        color: #185A95
+        width: 250px
+        background-color: #dddfe0
+      &:last-child
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        & button, & a
+          background-color: #2FABCC
+          border: none
+          color: #FFF
+          padding: 10px 25px
+          width: 250px
+          margin-bottom: 20px
+          &:hover, &:focus, &:active
+            background-color: #185A95
+            text-decoration: none
+        & a
+          width: 200px
+          background-color: #185A95
+          margin-bottom: 0
+          text-align: center
+          &:hover
+            background-color: #2FABCC
