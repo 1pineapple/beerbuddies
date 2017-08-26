@@ -1,33 +1,33 @@
 <div id="sidebar">
     <a href="{{ route('home') }}">
-        <img src="img/logo.png" class="img-responsive" alt="">
+        <img src="{{ asset('img/logo.png') }}" class="img-responsive" alt="BeerBuddies">
     </a>
 
     <div class="nav-sidebar">
         <ul>
             <li>
-                <a href="{{ route('home') }}" class="active">
-                    <i class="fa fa-home"></i>
+                <a href="{{ route('home') }}" class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
                     <span>Home</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-newspaper-o"></i>
                     <span>Feed</span></a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-envelope"></i>
-                    <span>Messages</span></a>
+                    <span>Messages</span>
+                    <span class="notification-count">6789</span>
+                </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-users"></i>
-                    <span>Friends</span></a>
+                    <span>Followers</span>
+                    <span class="notification-count">345</span>
+                </a>
             </li>
         </ul>
     </div>
 
-    <p class="copyright">Vania Kucher (c) 2017</p>
+    <p class="copyright">Vania Kucher © 2017</p>
 </div>
