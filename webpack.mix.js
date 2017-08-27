@@ -17,6 +17,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/login.sass', 'public/css')
    .sass('resources/assets/sass/home.sass', 'public/css')
    .sass('resources/assets/sass/edit-profile.sass', 'public/css')
+   .sass('resources/assets/sass/media.sass', 'public/css')
    .sass('resources/assets/sass/libs/FontAwesome/font-awesome.scss', 'public/css')
    .copyDirectory('resources/assets/img', 'public/img')
    .copyDirectory('resources/assets/fonts', 'public/fonts');

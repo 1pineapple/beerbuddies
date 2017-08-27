@@ -27,6 +27,10 @@ Route::post('/profile/edit', 'EditProfileController@editProfile')->name('editPro
 
 Route::get('/user/{slug}', 'UserController@index')->name('user');
 
+Route::get('/user/{slug}/follow', 'FollowController@follow')->name('follow');
+
+Route::get('/user/{slug}/unfollow', 'FollowController@unfollow')->name('unfollow');
+
 Route::post('/user/avatar/upload', 'HomeController@fileUpload')->name('upload');
 
 

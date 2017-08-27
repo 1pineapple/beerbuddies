@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 use File;
@@ -27,9 +28,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = auth()->user();
+
         $users = User::all();
 
-        return view('home', compact('users'));
+        $countFollowing = DB::table('follow')->where('who_follow', $user->id )->pluck('to_follower')->count();
+        $countFollowers = DB::table('follow')->where('to_follower', $user->id )->pluck('who_follow')->count();
+
+        return view('home', compact('users', 'countFollowing', 'countFollowers'));
     }
 
     public function fileUpload(Request $request){

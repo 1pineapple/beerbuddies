@@ -24,7 +24,7 @@
             </div>
 
             <div class="user-buttons">
-                <a href="#" class="follow-btn">Follow</a>
+                <a href="{{ $nowFollow ? Request::url() . '/unfollow' : Request::url() . '/follow' }}" class="follow-btn {{ $nowFollow ? 'true' : 'false' }}">{{ $nowFollow ? 'Unfollow' : 'Follow' }}</a>
                 <a href="#" class="message-btn">Message</a>
             </div>
 
@@ -32,11 +32,11 @@
         <div class="info-stats">
             <div class="stats-block">
                 <small>Followers</small>
-                <span>50</span>
+                <span>{{ $countUserFollowers }}</span>
             </div>
             <div class="stats-block">
                 <small>Following</small>
-                <span>123</span>
+                <span>{{ $countUserFollowing }}</span>
             </div>
             <div class="stats-block">
                 <small>Achievements</small>

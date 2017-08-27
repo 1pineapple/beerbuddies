@@ -31,11 +31,11 @@
         <div class="info-stats">
             <div class="stats-block">
                 <small>Followers</small>
-                <span>50</span>
+                <span>{{ $countFollowers }}</span>
             </div>
             <div class="stats-block">
                 <small>Following</small>
-                <span>123</span>
+                <span>{{ $countFollowing }}</span>
             </div>
             <div class="stats-block">
                 <small>Achievements</small>
