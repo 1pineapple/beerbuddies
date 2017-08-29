@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Brief about project]
+Simple social network for people who likes beer =)
 
 ## Requirements
 
@@ -44,6 +44,16 @@ Create route cache
 ```sh
 php artisan route:cache
 ```
+
+## Todo
+- [x] Todo list in readme.md
+- [ ] Form "Today I drank"
+- [ ] Followers/Following
+- [ ] Notification
+- [ ] Feed
+- [ ] Rating
+- [ ] Achievement
+
 ## License
 
 MIT License
