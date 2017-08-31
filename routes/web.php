@@ -17,25 +17,29 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/home', function() { return Redirect::to('/'); });
 
-// Profile
+Route::group(['middleware' => ['auth']], function () {
+    
+    // Profile
 
-Route::get('/profile/edit', 'EditProfileController@index')->name('editProfile');
+    Route::get('/profile/edit', 'EditProfileController@index')->name('editProfile');
+    Route::post('/profile/edit', 'EditProfileController@editProfile')->name('editProfileSubmit');
 
-Route::post('/profile/edit', 'EditProfileController@editProfile')->name('editProfileSubmit');
+    // User
+    
+    Route::group(['prefix' => 'user'], function () {
+        
+        Route::get('/{slug}', 'UserController@index')->name('user');
+        Route::get('/{slug}/follow', 'FollowController@follow')->name('follow');
+        Route::get('/{slug}/unfollow', 'FollowController@unfollow')->name('unfollow');
+        Route::post('/avatar/upload', 'HomeController@fileUpload')->name('upload');
+        
+    });
 
-// User
-
-Route::get('/user/{slug}', 'UserController@index')->name('user');
-
-Route::get('/user/{slug}/follow', 'FollowController@follow')->name('follow');
-
-Route::get('/user/{slug}/unfollow', 'FollowController@unfollow')->name('unfollow');
-
-Route::post('/user/avatar/upload', 'HomeController@fileUpload')->name('upload');
+});
 
 
 Route::get('/logout', function()
 {
     Auth::logout();
-    return Redirect::to('/');
+    return Redirect::route('home');
 });

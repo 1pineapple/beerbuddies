@@ -8,10 +8,6 @@ use App\User;
 
 class EditProfileController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
