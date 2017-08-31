@@ -17,13 +17,13 @@
             <li>
                 <a href="#">
                     <span>Messages</span>
-                    <span class="notification-count">6789</span>
+                    {{--<span class="notification-count">6789</span>--}}
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span>Followers</span>
-                    <span class="notification-count">345</span>
+                    {{--<span class="notification-count">345</span>--}}
                 </a>
             </li>
             <li>
