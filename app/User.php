@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Achievement;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -37,6 +38,9 @@ class User extends Authenticatable
         return $this->belongsToMany(User::class, 'follow', 'to_follower', 'who_follow');
     }
     
-    
+    public function achievements()
+    {
+        return $this->belongsToMany(Achievement::class, 'users_achievements');
+    }
     
 }

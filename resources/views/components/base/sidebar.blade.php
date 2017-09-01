@@ -14,12 +14,12 @@
                 <a href="#">
                     <span>Feed</span></a>
             </li>
-            <li>
-                <a href="#">
-                    <span>Messages</span>
+            {{--<li>--}}
+                {{--<a href="#">--}}
+                    {{--<span>Messages</span>--}}
                     {{--<span class="notification-count">6789</span>--}}
-                </a>
-            </li>
+                {{--</a>--}}
+            {{--</li>--}}
             <li>
                 <a href="#">
                     <span>Followers</span>

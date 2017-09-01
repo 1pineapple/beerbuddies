@@ -40,7 +40,7 @@
             </div>
             <div class="stats-block">
                 <small>Achievements</small>
-                <span>4567</span>
+                <span>{{ $user->achievements->count() }}</span>
             </div>
         </div>
     </div>
@@ -55,9 +55,13 @@
     </div>
 
     <div class="list-achievement">
-        <div class="achievement-item">
-            <img src="{{ asset('img/achievement.png') }}" class="img-responsive" alt="Achievements to register on BeerBuddies" title="Achievements to register on BeerBuddies">
-        </div>
+
+        @foreach($user->achievements as $achievement)
+            <div class="achievement-item">
+                <img src="{{ asset('img/achievements/' . $achievement->img ) }}" class="img-responsive" alt="{{ $achievement->title }}" title="{{ $achievement->description }}">
+            </div>
+        @endforeach
+
     </div>
 </div>
 

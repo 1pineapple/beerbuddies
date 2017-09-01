@@ -35,7 +35,7 @@ class HomeController extends Controller
         $countFollowing = DB::table('follow')->where('who_follow', $user->id )->pluck('to_follower')->count();
         $countFollowers = DB::table('follow')->where('to_follower', $user->id )->pluck('who_follow')->count();
 
-        return view('home', compact('users', 'countFollowing', 'countFollowers'));
+        return view('home', compact('user', 'users', 'countFollowing', 'countFollowers'));
     }
 
     public function fileUpload(Request $request){
