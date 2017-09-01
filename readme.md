@@ -1,8 +1,6 @@
 # Beer Buddies
 
-## Introduction
-
-Simple social network for people who likes beer =)
+Simple social network for people who likes beer :beers:
 
 ## Requirements
 
@@ -52,7 +50,7 @@ php artisan route:cache
 - [ ] Notification
 - [ ] Feed
 - [ ] Rating
-- [ ] Achievement
+- [x] Achievement
 
 ## License
 
