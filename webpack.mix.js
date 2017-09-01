@@ -13,9 +13,11 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .copy('resources/assets/js/home.js', 'public/js')
+   .copy('resources/assets/js/users.js', 'public/js')
    .sass('resources/assets/sass/app.sass', 'public/css')
    .sass('resources/assets/sass/login.sass', 'public/css')
    .sass('resources/assets/sass/home.sass', 'public/css')
+   .sass('resources/assets/sass/users-page.sass', 'public/css')
    .sass('resources/assets/sass/edit-profile.sass', 'public/css')
    .sass('resources/assets/sass/media.sass', 'public/css')
    .sass('resources/assets/sass/libs/FontAwesome/font-awesome.scss', 'public/css')

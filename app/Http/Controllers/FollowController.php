@@ -33,6 +33,15 @@ class FollowController extends Controller
         return null;
     }
 
+    public function users()
+    {
+        $user = auth()->user();
+
+        $users = User::all();
+
+        return view('users', compact('user', 'users'));
+    }
+
     public function unfollow(Request $request, $slug)
     {
         $whoUnFollow = auth()->user();

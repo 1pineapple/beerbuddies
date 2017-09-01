@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/home', function() { return Redirect::to('/'); });
 
+Route::get('/users', 'FollowController@users')->name('users');
+
 Route::group(['middleware' => ['auth']], function () {
     
     // Profile

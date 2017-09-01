@@ -21,14 +21,9 @@
                 {{--</a>--}}
             {{--</li>--}}
             <li>
-                <a href="#">
-                    <span>Followers</span>
+                <a href="{{ route('users') }}" class="{{ Route::currentRouteName() == 'users' ? 'active' : '' }}">
+                    <span>Users</span>
                     {{--<span class="notification-count">345</span>--}}
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>Following</span>
                 </a>
             </li>
         </ul>
