@@ -1,7 +1,5 @@
 # Beer Buddies
 
-## Introduction
-
 Simple social network for people who likes beer :beers:
 
 ## Requirements
