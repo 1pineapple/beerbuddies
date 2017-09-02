@@ -45,8 +45,8 @@ php artisan route:cache
 
 ## Todo
 - [x] Todo list in readme.md
-- [ ] Form "Today I drank"
-- [ ] Followers/Following
+- [x] Form "Today I drank"
+- [x] Followers/Following
 - [ ] Notification
 - [ ] Feed
 - [ ] Rating
