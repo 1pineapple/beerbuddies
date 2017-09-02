@@ -17,10 +17,13 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/home', function() { return Redirect::to('/'); });
 
-Route::get('/users', 'FollowController@users')->name('users');
-
 Route::group(['middleware' => ['auth']], function () {
     
+    // Home
+
+    Route::post('/drank', 'HomeController@drank')->name('drank');
+    Route::get('/feed', 'FeedController@index')->name('feed');
+
     // Profile
 
     Route::get('/profile/edit', 'EditProfileController@index')->name('editProfile');
@@ -36,6 +39,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/avatar/upload', 'HomeController@fileUpload')->name('upload');
         
     });
+
+    // Followers/Following
+
+    Route::get('/users', 'FollowController@users')->name('users');
 
 });
 

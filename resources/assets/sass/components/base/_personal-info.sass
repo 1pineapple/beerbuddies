@@ -4,7 +4,6 @@
   padding: 23px 40px
   display: flex
   width: auto
-  margin-right: 30px
   min-width: 680px
   align-items: center
   & .full-name
@@ -84,9 +83,51 @@
     &:hover
       cursor: pointer
 
+#form-today-drank
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  box-shadow: 0 5px 5px rgba(0,0,0,0.02)
+  padding: 23px 40px
+  & h2
+    margin: 0
+    font-weight: 100
+    margin-bottom: 15px
+  & span
+    width: 100%
+    & input
+      width: 100%
+  & input
+    margin-bottom: 15px
+    width: calc(50% - 2px)
+    color: #555555
+    border-top: none
+    box-shadow: none
+    border-left: none
+    border-right: none
+    border-radius: 0
+    border-bottom: 1px solid #e8e8e8
+    padding: 6px 5px
+    &:focus
+      outline: none
+  & input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+  & button.drank-btn
+    padding: 10px 0
+    background-color: #2FABCC
+    color: #FFF
+    border: none
+    width: 50%
+    display: block
+    margin: 0 auto
+    text-transform: uppercase
+    &:hover
+      background-color: #185A95
 #personal-achievement
   display: flex
   width: 100%
+  max-width: 500px
   background-color: #fff
   box-shadow: 0 5px 5px rgba(0,0,0,0.02)
   padding: 23px 40px
@@ -100,7 +141,6 @@
     & h2
       font-weight: 100
       height: 100%
-      border-radius: 50%
       margin: 0
       &:hover
         cursor: pointer
