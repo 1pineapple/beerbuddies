@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Achievement;
+use App\Beers;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -41,6 +42,11 @@ class User extends Authenticatable
     public function achievements()
     {
         return $this->belongsToMany(Achievement::class, 'users_achievements');
+    }
+
+    public function beers()
+    {
+        return $this->belongsToMany(Beers::class, 'user_beer_data');
     }
     
 }

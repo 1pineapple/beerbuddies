@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use File;
 use Image;
+use App\Beers;
 
 class HomeController extends Controller
 {
@@ -38,7 +39,8 @@ class HomeController extends Controller
         return view('home', compact('user', 'users', 'countFollowing', 'countFollowers'));
     }
 
-    public function fileUpload(Request $request){
+    public function fileUpload(Request $request)
+    {
 
         $user = auth()->user();
 
@@ -63,5 +65,20 @@ class HomeController extends Controller
             }
         }
         return null;
+    }
+
+    public function drank(Request $request)
+    {
+        $user = auth()->user();
+
+        $beer = new Beers;
+
+        $beer->user_id = $user->id;
+        $beer->beer_name = $request['beer-name'];
+        $beer->beer_count = $request['beer-count'];
+        $beer->beer_date = $request['beer-date'];
+        $beer->save();
+
+        return view('feed');
     }
 }

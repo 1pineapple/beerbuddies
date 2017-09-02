@@ -1,16 +1,66 @@
-.followers-users, .following-users
+div#users-page
+  width: 60%
+  margin: 0 auto
   background-color: #fff
-  width: calc(100% - 15px)
+  min-height: 500px
+  border-radius: 5px
+
+.tabs
+  width: 100%
+  border-radius: 5px 5px 0 0
+  display: flex
+  background-color: darken(#f5f8fa, 5%)
+
+.tab
+  width: 50%
+  display: inline-block
+  &:first-child
+    border-right: 1px solid rgba(255,255,255,0.5)
+    border-radius: 5px 0 0 0
+  &:last-child
+    border-radius: 0 5px 0 0
+  &:hover
+    background-color: lighten(#185A95, 15%)
+    cursor: pointer
+    & h2
+      color: #FFF
+  &.active
+    background-color: lighten(#185A95, 15%)
+    & h2
+      color: #fff
   & h2
-    text-align: center
-    font-size: 24px
+    color: darken(#f5f8fa, 80%)
     margin: 0
     padding: 15px 0
-    background-color: #2FABCC
-    color: #FFF
+    font-size: 18px
+    text-align: center
 
-.followers-users
-  margin-right: 15px
-
-.following-users
-  margin-left: 15px
+.tab_item
+  & ul
+    margin: 0
+    padding: 0
+    & li
+      list-style: none
+      & a
+        padding: 15px
+        border-bottom: 1px solid beige
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        width: 100%
+        &:hover, &:focus, &:active
+          text-decoration: none
+          background-color: rgba(0,0,0,0.02)
+        & img
+          width: 50px
+          height: 50px
+          margin-right: 15px
+          border-radius: 50%
+        & .follow-info
+          display: flex
+          flex-wrap: wrap
+          & .follow-name
+            width: 100%
+          & .follow-location
+            font-size: 14px
+            color: gray
