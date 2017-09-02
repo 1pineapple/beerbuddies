@@ -46,6 +46,28 @@
 
 </div>
 
+<form action="{{ route('drank') }}" method="post" id="form-today-drank">
+
+    {{ csrf_field() }}
+
+    <h2>I drank</h2>
+
+    <div class="form-group">
+
+        <input type="text" id="beer-name" name="beer-name" placeholder="Beer name" required>
+
+        <input type="number" id="beer-count" name="beer-count" placeholder="Liters" min="1" max="10" required>
+
+        <input type="date" class="datepicker" name="beer-date" placeholder="Date" required>
+
+    </div>
+
+    <div class="form-group">
+        <button class="drank-btn">Submit</button>
+    </div>
+
+</form>
+
 <div id="personal-achievement">
     <div class="title-achievement">
         <a href="#">
@@ -61,8 +83,6 @@
         @endforeach
     </div>
 </div>
-
-<div id="banner-350-250" style="margin-left: 30px;"></div>
 
 <!-- Modal -->
 <div id="followers" class="modal fade" role="dialog">

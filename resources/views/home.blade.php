@@ -18,11 +18,16 @@
 
 @section('css')
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/stefangabos/Zebra_Datepicker/dist/css/bootstrap/zebra_datepicker.min.css">
+
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
 @endsection
 
 @section('js')
+
+
+    <script src="https://cdn.jsdelivr.net/gh/stefangabos/Zebra_Datepicker/dist/zebra_datepicker.min.js"></script>
 
     <script src="{{ asset('js/home.js') }}"></script>
 

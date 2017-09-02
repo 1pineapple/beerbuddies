@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('feed') }}" class="{{ Route::currentRouteName() == 'feed' ? 'active' : '' }}">
                     <span>Feed</span></a>
             </li>
             {{--<li>--}}
